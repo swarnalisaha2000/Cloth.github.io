@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html class="background-100-e">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>ClothPrism</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="bower_components/animate.css/animate.min.css" />
+		<link rel="stylesheet" href="bower_components/minicolors/jquery.minicolors.css" />
+		<link rel="stylesheet" href="bower_components/slick.js/slick/slick.css" />
+		<link rel="stylesheet" href="bower_components/slick.js/slick/slick-theme.css" />
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap-custom.min.css" />
+		<link rel="stylesheet" href="lib/linecons/style.css" />
+		<link rel="stylesheet" href="styles/style.min.css" />
+		<link rel="stylesheet" href="theme-custom.css" />
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+	<style type="text/css">
+		    ul{
+		        list-style:none;
+		    }
+		</style>
+		<style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            
+            #myImg {
+              border-radius: 5px;
+              cursor: pointer;
+              transition: 0.3s;
+            }
+            
+            #myImg:hover {opacity: 0.7;}
+            
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 100px; /* Location of the box */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            }
+            
+            /* Modal Content (image) */
+            .modal-content {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 300px;
+            }
+            
+            /* Caption of Modal Image */
+            #caption {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 700px;
+              text-align: center;
+              color: #ccc;
+              padding: 10px 0;
+              height: 150px;
+            }
+            
+            /* Add Animation */
+            .modal-content, #caption {  
+              -webkit-animation-name: zoom;
+              -webkit-animation-duration: 0.6s;
+              animation-name: zoom;
+              animation-duration: 0.6s;
+            }
+            
+            @-webkit-keyframes zoom {
+              from {-webkit-transform:scale(0)} 
+              to {-webkit-transform:scale(1)}
+            }
+            
+            @keyframes zoom {
+              from {transform:scale(0)} 
+              to {transform:scale(1)}
+            }
+            
+            /* The Close Button */
+            .close {
+              position: absolute;
+              top: 150px;
+              right: 350px;
+              color: #f1f1f1;
+              font-size: 40px;
+              font-weight: bold;
+              transition: 0.3s;
+            }
+            
+            .close:hover,
+            .close:focus {
+              color: #bbb;
+              text-decoration: none;
+              cursor: pointer;
+            }
+            
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px){
+              .modal-content {
+                width: 100%;
+              }
+            }
+    </style>
+	
+	
+	</head>
+	
+	<body class="state1 background-100-e">
+
+		<div class="ext-nav background-95-h page-transition">
+			<div class="view half-height">
+				<img alt class="bg static" src="images/placeholders/1920x1200-1.jpg" />
+				<div class="content no-top-padding no-bottom-padding  full-height">
+					<div class="container-fluid  full-height">
+						<div class="row full-height">
+							<a href="#" class="col-md-6 colors-e background-95-e full-height">
+								<div>
+									<span class="side-label">Know about our blog</span>
+									<span class="side-title">Blog</span>
+								</div>
+							</a>
+							<a href="#" class="col-md-6 colors-f background-95-f full-height">
+								<div>
+									<span class="side-label">Our documentation for any kind of help</span>
+									<span class="side-title">Help</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid  half-height">
+				<div class="row full-height">
+					<a href="#how-we-work" class="col-md-4 colors-g background-solid full-height border-bottom border-lite">
+						<div>
+							<span class="side-label">Something about our work</span>
+							<span class="side-title">How We Work</span>
+						</div>
+					</a>
+					<a href="#who-we-are" class="col-md-4 colors-g background-solid full-height border-bottom border-left border-lite">
+						<div>
+							<span class="side-label">Let us introduce ourselves</span>
+							<span class="side-title">Who We Are</span>
+						</div>
+					</a>
+					<a href="#numbers" class="col-md-4 colors-g background-solid full-height border-bottom border-left border-lite">
+						<div>
+							<span class="side-label">Our Achievements</span>
+							<span class="side-title">Our Numbers</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="page-border bottom colors-e background-solid"><a href="#top" class="hover-effect">To <span class="highlight">Top</span></a></div>
+		<div class="page-border left colors-e background-solid">
+			<ul>
+				<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="http://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+				<li><a href="https://vimeo.com/" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+				<li><a href="http://www.skype.com/" target="_blank"><i class="fa fa-skype"></i></a></li>
+			</ul>
+		</div>
+		<!-- BEGIN: Top menu -->
+		<div class="page-border right colors-e background-solid"></div>
+		<nav class="navbar navbar-default navbar-fixed-top page-transition colors-e background-solid" role="navigation" id="top-nav">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="menu-toggle ext-nav-toggle visible-xs-block" data-target=".ext-nav" href="#"><span></span></a>
+					<a class="menu-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#"><span></span></a>
+					
+					<a class="navbar-brand" href="index.html" style= "font-size:25px;"><img src="favicon.png" height="39" width="24">Cloth<span class="highlight">Prism</span></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right" style="padding-top : 7px;">
+						<li><a href="#home" class="hover-effect">Home</a></li>
+						<li><a href="#about" class="hover-effect">Company</a></li>
+						<li><a href="#team" class="hover-effect">Credentials</a></li>
+						<li class="nav-item dropdown"><a href="#who-we-are" class="hover-effect" data-target="#microdrop" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Collections
+						</a>
+                        <div class="dropdown-menu" id="microdrop">
+                        	<ul>
+                             <li><a class="dropdown-item hover-effect" href="high-fashion.html"><b>High Fashion Embroidery</b></a></li>
+                             <li><a class="dropdown-item hover-effect" href="feathers-embroidary.html"><b>Feathers – Embroidery</b></a></li>
+                             <li><a class="dropdown-item hover-effect" href="accessories.html" ><b>Accessories / Trims / Motifs / Neck line</b></a></li>
+                             <li><a class="dropdown-item hover-effect" href="woven.html" ><b>Woven Fabrics of Silk</b></a></li>
+                              <li><a class="dropdown-item hover-effect" href="linen.html" ><b>Linen Fabrics</b> </a></li>
+                             
+                         </ul>
+                        </div>
+                        </li>
+						<li><a href="design-studio.html" class="hover-effect">Design Studio</a></li>
+						<li><a href="#contact" class="hover-effect">Contact</a></li>
+						<li class="hidden-xs"><a class="menu-toggle ext-nav-toggle" data-target=".ext-nav" href="#"><span></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END: Top menu -->
+		<ul id="dot-scroll" class="colors-e background-solid"></ul>
+		<div class="overlay-window gallery-overlay colors-f background-95-f" data-overlay-zoom="#work .content">
+			<div class="overlay-control background-85-d">
+				<a class="previos" href="#"></a>
+				<a class="next" href="#"></a>
+				<a class="cross" href="#"></a>
+			</div>
+			<div class="overlay-view"></div>
+			<ul class="loader">
+				<li class="background-100-d"></li>
+				<li class="background-100-d"></li>
+				<li class="background-100-d"></li>
+			</ul>
+		</div>
+		<div class="overlay-window map-overlay colors-f background-95-f">
+			<div class="overlay-control background-90-f">
+				<a class="cross" href="#"></a>
+			</div>
+			<div class="overlay-view">
+				<div class="map-canvas" data-latitude="42.487606" data-longitude="-71.115661" data-zoom="14">
+					<div class="map-marker" data-latitude="42.487606" data-longitude="-71.115661" data-text="Our awesome location"></div>
+					<div class="map-marker" data-latitude="42.485100" data-longitude="-71.113256" data-text="Our sales office"></div>
+				</div>
+			</div>
+		</div>
+		<div class="overlay-window credits-overlay colors-g background-95-g">
+			<div class="overlay-control background-85-d">
+				<a class="cross" href="#"></a>
+			</div>
+			<div class="overlay-view">
+				<div class="content-container">
+					<h3>Credits</h3>
+					<ul>
+						<li>
+							Photos by:
+							<ul>
+								
+							</ul>
+						</li>
+						<li>
+							Video by:
+							<ul>
+								<li><a target="_blank" href="http://mazwai.com/">Mazwai</a>, <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0 License</a></li>
+							</ul>
+						</li>
+						<li>
+							Icons by:
+							<ul>
+								<li><a target="_blank" href="http://designmodo.com/">Designmodoh</a>, <a target="_blank" href="http://designmodo.com/linecons-free/">License</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="gate colors-e background-solid">
+			<div class="gate-bar background-highlight-e"></div>
+			<ul class="loader">
+				<li class="background-100-g"></li>
+				<li class="background-90-c"></li>
+				<li class="background-100-f"></li>
+			</ul>
+		</div>
+		<!-- BEGIN: Page content -->
+		<section id="home">
+
+
+			<div class="view">
+							<div style=" background: #0000008c;width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 1;"></div>
+
+				<img alt class="bg" src="images/textile/slider1.jpg" />
+				<img alt class="bg" src="images/textile/slider2.jpg" />
+				<img alt class="bg" src="images//textile/slider1.jpg" />
+				<img alt class="bg" src="images/placeholders/banner_linen.jpg" />
+				<img alt class="bg" src="images/placeholders/banner_woven.jpg" />
+
+				<div class="content home-alice full-size colors-a background-transparent" style="z-index: 1;">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-5 col-md-offset-1">
+								<div class="text-center textillate heading" data-textillate-options="{loop:true, in:{effect:'flipInY', reverse:true}, out:{effect:'flipOutY', reverse:true}}" style="color: white;" >
+									<ul class="texts">
+										<li>Accessories</li>
+										<li>Embroidery</li>
+										<li>Feather</li>
+										<li>Linen</li>
+										<li>Woven</li>
+									</ul>
+								</div>
+								<h2 class="heading text-right" style="color: white;">ClothPrism</h2>
+								<p class="text-right title" style="color: #FBCEB1; font-size:18px; line-height: 25px;">
+									ClothPrism introduces an assorted range of eco-friendly fabrics to level up your style & your confidence. Every bit of this range is as natural as it can get, making it one-of-its-kind.
+								</p>
+								<p class="text-right"><a href="#about" class="button background-60-d heading-d">About Us</a><a href="#how-we-work" class="button background-60-f heading-f">Our Work</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="about">
+			<div class="view">
+				<img alt class="bg" src="images/placeholders/1920x1200-2.jpg" />
+				<div class="content pane">
+					<div class="container-fluid">
+						<div class="row hidden-xs hidden-sm">
+							<div class="col-md-4 colors-b">
+								<div class="row">
+									<div class="col-xs-12 banner-cell">
+										<h3 class="light-font-weight">Attractive</h3>
+										<p class="title">Design</p>
+									</div>
+									<div class="col-xs-12 success heading-b banner-cell">
+										High on 
+										<br /> Modern Design
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 colors-c">
+								<div class="row">
+									<div class="col-xs-12 banner-cell">
+										<h3 class="light-font-weight">Gorgeous</h3>
+										<p class="title">Outfit</p>
+									</div>
+									<div class="col-xs-12 warning heading-c banner-cell">
+										World Class
+										<br /> Build Quality
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 colors-d">
+								<div class="row">
+									<div class="col-xs-12 banner-cell">
+										<h3 class="light-font-weight">Glorious</h3>
+										<p class="title">Looks</p>
+									</div>
+									<div class="col-xs-12 info heading-d banner-cell">
+									Every colour
+										<br /> Reflects Elegance
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="view">
+				<img alt class="bg" src="images/placeholders/banner_linen.jpg" /><img alt class="bg" src="images/placeholders/banner_linen.jpg" />
+				<div class="content colors-e">
+					<div class="container">
+						<h2>About Us</h2>
+						<p class="header-details"><span class="highlight">We are</span> All Creators</p>
+						<p class="lead"><span class="highlight">“ ClothPrism “ </span>is one of the leading export house in India. The company is led by its founders who widely travelled across the Globe meeting  buyers , attending fairs , fashion shows etc.</p>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="col-icon">
+									<i class="li_bulb"></i>
+								</div>
+								<div class="col-content">
+									<h4>Research <span class="highlight"> & Development</span></h4>
+									<p>Continuous research and development of new designs and new fabrics as per the fashion trends is running under the guidance of experienced designers, executives and skilled embroidery workers. Fashion forecasts watched, monitored and worked upon to meet the requirement of fashion industry.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="col-icon">
+									<i class="li_t-shirt"></i>
+								</div>
+								<div class="col-content">
+									<h4>Quality Control <span class="highlight"> & Commitment</span></h4>
+									<p>Full thrust is given on quality control and all the production is thoroughly checked by experienced team before packing and making any shipment.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="col-icon">
+									<i class="li_megaphone"></i>
+								</div>
+								<div class="col-content">
+									<h4>Client <span class="highlight">Support</span></h4>
+									<p>Keeping loyal customers is less expensive than getting new ones. Research shows that it costs about five times more to attract new customers than to retain existing business. Satisfied customers become devoted buyers when a business is trustworthy and provides good customer service.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="view" id="how-we-work">
+				<img alt class="bg" src="images/textile/slider2.jpg" /><img alt class="bg" src="images/textile/slider1.jpg" />
+				<div class="content colors-h">
+					<div class="container">
+						<h3><span class="highlight">How</span> We Work</h3>
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<p class="text-center">We always work with compassion, fairness, honor, responsibility, and integrity. Developing a good work ethic is key. We apply ourself at whatever we do, our work ethic reflectes in every part of our work. Here are somethings that define us.</p>
+							</div>
+						</div>
+						<div class="row icon-set">
+							<div class="col-md-3 text-center">
+								<p>
+									<i class="li_eye circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
+								</p>
+								<p class="title"><span class="underline-text">Labour Orientation & Orientation</span></p>
+								<p>Our industry is basically hand work and thus lots of labour is involved. Therefore we are providing direct and indirect employment and support to several thousand families. We are also strictly against use of child labour.</p>
+							</div>
+							<div class="col-md-3 text-center">
+								<p>
+									<i class="li_like circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
+								</p>
+								<p class="title"><span class="underline-text">Eco-Friendly</span></p>
+								<p>Special thrust is maintained to be eco-friendly by encouraging use of AZO FREE dyes, vegetable dyes.</p>
+							</div>
+							<div class="col-md-3 text-center">
+								<p>
+									<i class="li_paperplane circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
+								</p>
+								<p class="title"><span class="underline-text">Our Mission & Goal</span></p>
+								<p>We believe in providing complete solution to our buyers fashion requirements and their complete satisfaction is our ultimate goal.</p>
+							</div>
+							<div class="col-md-3 text-center">
+								<p>
+									<i class="li_lab circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
+								</p>
+								<p class="title"><span class="underline-text">Innovative</span></p>
+								<p>We believe in innovation. Innovation isn’t solely represented by new devices, ideas or methods, but also by the process of uncovering new ways to do things. It can also pertain to modifying business models and adapting to changes to achieve better products and services.Innovation is defined as the introduction of something new or different. The act of innovating leads to the introduction of new ideas, devices or methods.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="team">
+			<div class="view">
+				<img alt class="bg" src="images/placeholders/banner_linen.jpg" /><img alt class="bg" src="images/placeholders/banner_linen.jpg" />
+				<div class="content colors-e">
+					<div class="container">
+						<h2>OUR Team</h2>
+						<p class="header-details"><span class="highlight">Who </span>We Are</p>
+						<p class="lead">Our success depends on the <strong class="highlight">strength of our team.</strong> A teamwork environment promotes an atmosphere that fosters friendship and loyalty. These close-knit relationships motivate employees in parallel and align them to work harder, cooperate and be supportive of one another. Individuals possess diverse talents, weaknesses, communication skills, strengths, and habits.</p>
+						<div class="row">
+							<div class="col-md-4 col-sm-4  col-xs-4 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+								<div class="hover-overlay">
+									<img alt="Mike Johnson" src="images/placeholders/380x573-0.jpg" title="Mike Johnson" class="fluid-width" width="20%">
+									<div class="overlay background-90-b">
+										<div>
+											<p class="text-center text-uppercase heading-b">
+              									
+											</p>
+											<div class="separator-small"></div>
+											<p class="text-center">
+												<a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook heading-b"></i></a>
+												<a target="_blank" href="http://www.youtube.com/"><i class="fa fa-youtube heading-b"></i></a>
+												<a target="_blank" href="https://github.com/"><i class="fa fa-github heading-b"></i></a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="caption">
+									<p>
+										<span class="title">John Doe</span>
+										<br/>
+										<span class="highlight">CEO &amp; Founder</span>
+									</p>
+								</div>
+							</div>
+							
+							<div class="col-md-4 col-sm-4  col-xs-4 col-md-offset-right-2 col-sm-offset-right-2 col-xs-offset-right-2">
+								<div class="hover-overlay">
+									<img alt="Lynda Smith" src="images/placeholders/380x573-3.jpg" title="Lynda Smith" class="fluid-width" width="20%">
+									<div class="overlay background-90-b">
+										<div>
+											<p class="text-center text-uppercase heading-b">
+												
+											</p>
+											<div class="separator-small"></div>
+											<p class="text-center">
+												<a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter heading-b"></i></a>
+												<a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin heading-b"></i></a>
+												<a target="_blank" href="https://plus.google.com/"><i class="fa fa-google-plus heading-b"></i></a>
+												<a target="_blank" href="https://vimeo.com/"><i class="fa fa-vimeo-square heading-b"></i></a>
+												<a target="_blank" href="https://www.tumblr.com/"><i class="fa fa-tumblr heading-b"></i></a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="caption">
+									<p>
+										<span class="title">Jessica Baker</span>
+										<br/>
+										<span class="highlight">Programmer</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="view" id="who-we-are">
+				<div class="content pane">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 stretch-height pane">
+								<div class="view fluid-height">
+									<img alt class="bg" src="images/textile/slider3.jpg" />
+									<div class="content incut colors-d background-transparent">
+										<div class="position-middle-center text-center">
+											<a class="button background-lite-c heading-c" href="high-fashion.html">View Some Of Our Work</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6  stretch-height pane">
+								<div class="view fluid-height">
+									<div class="content incut colors-e background-solid">
+										<div class="position-middle-center" style="padding-top:50px;">
+											<h3 class="text-left"><span class="highlight">Who</span> We Are</h3>
+											<p class="subtitle highlight"><strong>We are a group of website developers looking forward to design new websites for our customers.</strong></p>
+											<p>At the outset, web designing emerged as an easier and simple way of exchanging information. It was a better means of communication and had better networking benefits compared to the commercial reasons.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="collections">
+			<div class="view">
+				<img alt class="bg" src="images/textile/slider1.jpg" /><img alt class="bg" src="images/textile/slider2.jpg" />
+				<div class="content colors-e">
+					<div class="container">
+						<h2>Collections</h2>
+						<p class="header-details"><span class="highlight">We Are Here</span> For You</p>
+						<p class="lead"></p>
+						<div class="row">
+							<div class="col-md-3 top-line">
+								<h4>HIGH FASHION<br />EMBROIDERY</h4>
+								<p class="highlight">Embroidery is the handicraft of decorating fabric or other materials with needle and thread or yarn. Embroidery may also incorporate other materials such as, pearls, beads, quills, and sequins. We provide best quality high fashion embroidery.</p>
+							</div>
+							<div class="col-md-3 top-line">
+								<h4>Woven fabrics<br />of silk</h4>
+								<p class="highlight">Silk does for the body what diamonds do for the hand. Silk is a natural protein fiber, some forms of which can be woven into textiles. Silk is a sign of elegance. Our silk collections are incredible.</p>
+								<ul class="simple">
+									<li>Dupion silk</li>
+								</ul>
+							</div>
+							<div class="col-md-3 top-line">
+								<h4>Linen<br />fabrics</h4>
+								<p class="highlight">ClothPrism is a leading manufacturer of 100% pure linen fabric since more than 60 years. Our entire linen collection is made from handpicked fibres. </p>
+								<ul class="simple">
+									<li>Linen Embroidery</li>
+									<li>Linen Plain</li>
+									<li>Linen Prints</li>
+								</ul>
+							</div>
+							<div class="col-md-3 top-line">
+								<h4>Accessories & trims<br />motifs & neckline</h4>
+								<p class="highlight">motifs are made one at a time and joined together to create larger works such as afghan blankets or shawls. We also have beautiful necklines and trims which will blow your mind.</p>
+								<ul class="simple">
+									<li>Motifs</li>
+									<li>Neck Line</li>
+									<li>Trims</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="view">
+				<img alt class="bg" src="images/textile/slider3.jpg" /><img alt class="bg" src="images/placeholders/banner_embrodery.jpg" /><img alt class="bg" src="images/textile/slider3.jpg" />
+				<div class="content half-size colors-h">
+					<div class="container">
+						<div class="show-list slogan">
+							<div class="show-item">We are High fashion Fabric Exporter
+</div>
+                        </div>
+						<div class="separator"></div>
+						<p class="text-center big-font">
+							<em>— Neither is there anyone who loves, pursues or desires pain itself because it is pain —</em>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="process">
+			<div class="view">
+				<img alt class="bg" src="images/textile/slider3.jpg" /><img alt class="bg" src="images/placeholders/banner_linen.jpg" />
+				<div class="content colors-e">
+					<div class="container">
+						<h2>Work <span class="highlight">Process</span></h2>
+						<p class="header-details"><span class="highlight">We Make</span> Our Customers Happy</p>
+						<p class="lead">Customer service is importance to your business because it's retains customers and extracts more value from them. By providing top-notch customer service, businesses recoup customer acquisition costs and cultivate a loyal following that refers customers, serves as case studies, and provides testimonials and reviews. This is how we do that.</p>
+						<div class="process">
+							<div class="row process-row">
+								<div class="col-md-3 process-step">
+									<div class="process-box"><i class="li_search heading"></i></div>
+									<p class="title">Research</p>
+									<p class="text-center">Business research is one of the most effective ways to understand customers, the market and competitors. Using such research will help businesses reduce costs, and create solutions or products that are targeted to the demand in the market and the correct audience.</p>
+								</div>
+								<div class="col-md-3 process-step">
+									<div class="process-box"><i class="li_pen heading"></i></div>
+									<p class="title">Concept</p>
+									<p class="text-center">Business plans typically include detailed information that can help improve the business's chances of success, like a market analysis, competitive analysis, customer segmentation, marketing, logistics and operations plans, cash flow projection and an overall path to long-term growth.</p>
+								</div>
+								<div class="col-md-3 process-step">
+									<div class="process-box"><i class="li_settings heading"></i></div>
+									<p class="title">Develop</p>
+									<p class="text-center">Perhaps most important, development is an abbreviated term significantly diminishing the understanding of what this critical process actually is. The process is more accurately developing efficiency. </p>
+								</div>
+								<div class="col-md-3 process-step">
+									<div class="process-box"><i class="li_paperplane heading"></i></div>
+									<p class="title">Test</p>
+									<p class="text-center">Testing essentially helps us save time and money in the long run because issues are resolved before bigger problems occur. The maintenance costs are also lower and in the end if product works 100% as it should, no exponential damage is done to our business cost-wise.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<p class="text-center">These are all of our principle of working.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="view" id="numbers">
+				<img alt class="bg" src="images/textile/slider4.jpg" /><img alt class="bg" src="images/textile/slider3.jpg" />
+				<div class="content half-size colors-h">
+					<div class="container-fluid">
+						<h3>Our <span class="highlight">Numbers</span></h3>
+						<p class="title"><span class="highlight">Some of the</span> cool facts about us</p>
+						<p class="title"><span class="highlight">These are not only numbers,</span> these are our achievements.</p>
+						<div class="row counters">
+							<div class="col-md-3 counter background-25-b">
+								<div class="count player row heading background-10-light">135</div>
+								<div class="caption">Projects</div>
+							</div>
+							<div class="col-md-3 counter background-35-h">
+								<div class="count player row heading background-10-light">115</div>
+								<div class="caption">Clients</div>
+							</div>
+							<div class="col-md-3 counter background-25-b">
+								<div class="count player row heading background-10-light">3459</div>
+								<div class="caption">Followers</div>
+							</div>
+							<div class="col-md-3 counter background-35-h">
+								<div class="count player row heading background-10-light">5</div>
+								<div class="caption">Years</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<p class="text-center ">Sometimes a number also defines us.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="skills">
+			<!--<div class="view">
+				<img alt class="bg" src="images/placeholders/1920x1200-2.jpg" /><img alt class="bg" src="images/placeholders/1920x1200-0.jpg" />
+				<div class="content colors-e">
+					<div class="container">
+						<h2>Our <span class="highlight">Skills</span></h2>
+						<p class="header-details"><span class="highlight">Our Main</span> Skills</p>
+						<p class="lead">In everyday life, the development of life skills helps us findind new ways of thinking and problem solving. Our employers have following skills.</p>
+						<div class="row">
+							<div class="col-md-6">
+								<ul class="widget-tabs nav nav-tabs background-lite-e">
+									<li class="active"><a href="#html5" data-toggle="tab">HTML5</a></li>
+									<li class=""><a href="#css3" data-toggle="tab">CSS3</a></li>
+									<li class=""><a href="#jquery-skill" data-toggle="tab">jQuery</a></li>
+									<li class=""><a href="#wordpress" data-toggle="tab">Wordpress</a></li>
+									<li class=""><a href="#seo" data-toggle="tab">SEO</a></li>
+									<li class=""><a href="#photoshop" data-toggle="tab">Photoshop</a></li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane fade active in" id="html5">
+										<p>HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and latest major version of HTML that is a World Wide Web Consortium (W3C) recommendation. The current specification is known as the HTML Living Standard.</p>
+									</div>
+									<div class="tab-pane fade" id="css3">
+										<p>CSS stands for Cascading Style Sheets
+                                          CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+                                          CSS saves a lot of work. It can control the layout of multiple web pages all at once
+                                          External stylesheets are stored in CSS files</p>
+									</div>
+									<div class="tab-pane fade" id="jquery-skill">
+										<p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+									</div>
+									<div class="tab-pane fade" id="php">
+										<p>What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was. You can even configure your web server to process all your HTML files with PHP, and then there's really no way that users can tell what you have up your sleeve.
+
+                                        The best things in using PHP are that it is extremely simple for a newcomer, but offers many advanced features for a professional programmer. Don't be afraid reading the long list of PHP's features. You can jump in, in a short time, and start writing simple scripts in a few hours.</p>
+									</div>
+									<div class="tab-pane fade" id="wordpress">
+										<p>WordPress is an excellent website platform for a variety of websites. From blogging to e-commerce to business and portfolio websites, WordPress is a versatile CMS. Designed with usability and flexibility in mind, WordPress is a great solution for both large and small websites.</p>
+									</div>
+									<div class="tab-pane fade" id="seo">
+										<p>SEO stands for Search Engine Optimization, which is the practice of increasing the quantity and quality of traffic to your website through organic search engine results.</p>
+									</div>
+									<div class="tab-pane fade" id="photoshop">
+										<p>Photoshop is a software application for image editing and photo retouching for use on Windows or MacOS computers. Photoshop offers users the ability to create, enhance, or otherwise edit images, artwork, and illustrations. Changing backgrounds, simulating a real-life painting, or creating an alternative view of the universe are all possible with Adobe Photoshop. It is the most widely used software tool for photo editing, image manipulation, and retouching for numerous image and video file formats. The tools within Photoshop make it possible to edit both individual images as well as large batches of photos.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="skillbars">
+									<div class="skillbar clearfix background-d" data-percent="40%">
+										<div class="skillbar-title background-b heading-b"><span>HTML5</span></div>
+										<div class="skillbar-bar background-b"></div>
+										<div class="skill-bar-percent heading-d">40%</div>
+									</div>
+									<div class="skillbar clearfix background-d" data-percent="45%">
+										<div class="skillbar-title background-c heading-c"><span>CSS3</span></div>
+										<div class="skillbar-bar background-c"></div>
+										<div class="skill-bar-percent heading-d">45%</div>
+									</div>
+									<div class="skillbar clearfix background-d" data-percent="50%">
+										<div class="skillbar-title background-b heading-b"><span>jQuery</span></div>
+										<div class="skillbar-bar background-b"></div>
+										<div class="skill-bar-percent heading-d">50%</div>
+									</div>
+									<div class="skillbar clearfix background-d" data-percent="40%">
+										<div class="skillbar-title background-c heading-c"><span>PHP</span></div>
+										<div class="skillbar-bar background-c"></div>
+										<div class="skill-bar-percent heading-d">40%</div>
+									</div>
+									<div class="skillbar clearfix background-d" data-percent="90%">
+										<div class="skillbar-title background-b heading-b"><span>Wordpress</span></div>
+										<div class="skillbar-bar background-b"></div>
+										<div class="skill-bar-percent heading-d">90%</div>
+									</div>
+									<div class="skillbar clearfix background-d" data-percent="75%">
+										<div class="skillbar-title background-c heading-c"><span>SEO</span></div>
+										<div class="skillbar-bar background-c"></div>
+										<div class="skill-bar-percent heading-d">75%</div>
+									</div>
+									<div class="skillbar clearfix background-d" data-percent="70%">
+										<div class="skillbar-title background-b heading-b"><span>Photoshop</span></div>
+										<div class="skillbar-bar background-b"></div>
+										<div class="skill-bar-percent heading-d">70%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</section>
+		<section id="contact">
+			<div class="view">
+				<img alt class="bg" src="images/placeholders/banner_accessories.jpg" /><img alt class="bg" src="images/placeholders/banner_linen.jpg" />
+				<div class="content full-size colors-h">
+					<div class="container">
+						<h2>Contact Us</h2>
+						<p class="header-details">Keep In Touch</p>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="text-right scroll-in-animation" data-animation="fadeInLeft">
+								
+									<p class="big-font">ClothPrism</p>
+
+                                    <p class="big-font">Akshya Nagar 1st Block 1st Cross, Rammurthy nagar</p>
+									<p	class="big-font">Bangalore-560016,India
+									</p>
+										<p class="big-font uppercase">
+										Tel: <strong class="highlight">+91-1234567890</strong>
+									</p>
+									<p class="big-font">
+										<b>
+									<a href="mailto:info@ClothPrismindia.com">Email: info@ClothPrismindia.com</a><br/>
+									<a href="#">TAX ID: 123456789ABCD</a>
+
+								</b>
+									</p>
+									<p class="big-font">
+										<a target="_blank" href="https://twitter.com/"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x heading"></i><i class="fa fa-twitter fa-stack-1x text-background"></i></span></a>
+										<a target="_blank" href="https://www.facebook.com/"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x heading"></i><i class="fa fa-facebook fa-stack-1x text-background"></i></span></a>
+										<a target="_blank" href="http://www.youtube.com/"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x heading"></i><i class="fa fa-youtube fa-stack-1x text-background"></i></span></a>
+									</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="text-left scroll-in-animation" data-animation="fadeInRight">
+									<form class="ajax-form" data-message-class="colors-d background-95 heading border" action="contact.php" method="post" novalidate="novalidate">
+										<div class="row">
+											<div class="col-md-6 control-group">
+												<div class="alt-placeholder">Company Name</div>
+												<input type="text" name="your-name" value="" size="40" placeholder="COMPANY NAME" data-validation-required-message="Please fill the required field." required>
+												<div class="help-block"></div>
+											</div>
+											<div class="col-md-6 control-group">
+												<div class="alt-placeholder">Tel no.</div>
+												<input type="text" name="your-tel" value="" size="40" placeholder="TEL NO." data-validation-required-message="Please fill the required field." required>
+												<div class="help-block"></div>
+											</div>
+											<div class="col-md-12 control-group">
+												<div class="alt-placeholder">Email</div>
+												<input type="email" name="your-email" value="" size="60" placeholder="EMAIL" data-validation-required-message="Please fill the required field." required>
+												<div class="help-block"></div>
+											</div>
+											<div class="col-md-12 control-group">
+												<div class="alt-placeholder">Address</div>
+												<textarea rows="50" type="text" name="your-address" value="" size="60" placeholder="ADDRESS" data-validation-required-message="Please fill the required field." required></textarea>
+												<div class="help-block"></div>
+											</div>
+											<div class="col-md-12 form-actions">
+												<input class="button" type="submit" value="Send">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="text-center">
+							<a class="map-open button background-lite-b border-heading-b heading-b" data-map-overlay=".map-overlay" href="#">Locate Us on Map</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: Page content -->
+		<!-- BEGIN: Footer -->
+		<footer class="colors-g page-transition non-preloading">
+			<div class="container scroll-in-animation" data-animation="fadeInDown">
+				<div class="row">
+					<div class="col-md-3">
+					    
+						<h4>Cloth<span class="highlight">Prism</span></h4>
+						<div class="footer-description">
+							<p>keep connected with us on social media platforms.Website by <a href="https://www.oknitech.com" class="open-overlay-window heading" data-overlay-window=".credits-overlay">OKNITECH CORPORATION.</a></p>
+						</div>
+						<p class="social-links">
+							<a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+							<a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+							<a target="_blank" href="http://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+							<a target="_blank" href="https://vimeo.com/"><i class="fa fa-vimeo-square"></i></a>
+							<a target="_blank" href="https://www.pinterest.com/"><i class="fa fa-printerest"></i></a>
+							<a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>Additional Links</h5>
+						<ul class="simple">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">Company</a></li>
+							<li><a href="#team">Credentials</a></li>
+							<li><a href="#collections">Collections</a></li>
+							<li><a href="design-studio.html">Design Studio</a></li>
+							<li><a href="#">Infrastructure</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>Collections</h5>
+						<ul class="simple">
+							<li><a href="high-fashion.html">High-fashion Embroidery</a></li>
+							<li><a href="feathers-embroidary.html">Feathers Embroidery</a></li>
+							<li><a href="accessories.html">Accessories/motifs/trims/necklines</a></li>
+							<li><a href="woven.html">Woven fabrics of silk</a></li>
+							<li><a href="linen.html">Linen fabrics</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>Our Certificates</h5>
+						<div class="photo">
+							<div class="col-xs-3 col-sm-2 col-md-4">
+							<img class="fluid-width" id="myImg" src="images/textile/iso.jpg" style="height:200px; width:150px;" alt="ISO Certification">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+			<div class="bottom text-center background-10-b">
+				© 2020 All Rights Reserved. <a href="https://www.oknitech.com" class="open-overlay-window heading" data-overlay-window=".credits-overlay">OKNITECH CORPORATION.</a>
+			</div>
+		</footer>
+		<!-- END: Footer -->
+		<script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+</script>
+		<script>
+		if (typeof(atob) == "undefined")
+		{
+			document.write('<script src="lib/stringencoders-v3.10.3/javascript/base64.js"><\/script>');
+			var atob = function(x)
+			{
+				return base64.decode(x);
+			}
+		}
+		</script>
+		<script src="bower_components/less.js/dist/less.min.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="lib/tween/tween.min.js"></script>
+		<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="lib/SmoothScroll-1.2.1/SmoothScroll.js"></script>
+		<script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="bower_components/jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js"></script>
+		<script src="bower_components/minicolors/jquery.minicolors.min.js"></script>
+		<script src="bower_components/slick.js/slick/slick.min.js"></script>
+		<script src="bower_components/shufflejs/dist/jquery.shuffle.min.js"></script>
+		<script src="bower_components/textillate/assets/jquery.lettering.js"></script>
+		<script src="bower_components/textillate/assets/jquery.fittext.js"></script>
+		<script src="bower_components/textillate/jquery.textillate.js"></script>
+		<script src="lib/prism/prism.js"></script>
+		<script>
+		(function()
+		{
+			var disableMobileAnimations = true;
+			var isWin = navigator.appVersion.indexOf("Win") !== -1;
+			if (isWin) $('html').addClass('win');
+			var ua = navigator.userAgent.toLowerCase();
+			var isChrome = ua.indexOf('chrome') > -1;
+			if (isChrome) $('html').addClass('chrome');
+			var isAndroidBrowser4_3minus = ((ua.indexOf('mozilla/5.0') > -1 && ua.indexOf('android ') > -1 && ua.indexOf('applewebkit') > -1) && !(ua.indexOf('chrome') > -1));
+			if (isAndroidBrowser4_3minus) $('html').addClass('android-browser-4_3minus');
+			var isSafari = !isChrome && ua.indexOf('safari') !== -1;
+			if (isSafari) $('html').addClass('safari');
+			var isMobile = Modernizr.touch;
+			if (isMobile)
+			{
+				$('html').addClass('mobile');
+				if (disableMobileAnimations) $('html').addClass('poor-browser');
+			}
+			else
+			{
+				$('html').addClass('non-mobile');
+			}
+			if (isWin && isSafari)
+			{
+				$('html').addClass('flat-animation');
+			}
+		})();
+		</script>
+		<script src="scripts/script-bundle.js"></script>
+		<script>
+		if (Function('/*@cc_on return document.documentMode===9@*/')())
+		{
+			$('html').addClass('ie9');
+		}
+		if (Function('/*@cc_on return document.documentMode===10@*/')())
+		{
+			$('html').addClass('ie10');
+		}
+		if (!!navigator.userAgent.match(/Trident.*rv\:11\./))
+		{
+			$('html').addClass('ie11');
+		}
+		</script>
+	</body>
+</html>

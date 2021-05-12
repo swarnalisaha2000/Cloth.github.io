@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="background-100-e">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>ClothPrism</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="bower_components/animate.css/animate.min.css" />
+		<link rel="stylesheet" href="bower_components/minicolors/jquery.minicolors.css" />
+		<link rel="stylesheet" href="bower_components/slick.js/slick/slick.css" />
+		<link rel="stylesheet" href="bower_components/slick.js/slick/slick-theme.css" />
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap-custom.min.css" />
+		<link rel="stylesheet" href="lib/linecons/style.css" />
+		<link rel="stylesheet" href="styles/style.min.css" />
+		<link rel="stylesheet" href="theme-custom.css" />
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+	<style type="text/css">
+		    ul{
+		        list-style:none;
+		    }
+		</style>
+		<style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            
+            #myImg {
+              border-radius: 5px;
+              cursor: pointer;
+              transition: 0.3s;
+            }
+            
+            #myImg:hover {opacity: 0.7;}
+            
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 100px; /* Location of the box */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            }
+            
+            /* Modal Content (image) */
+            .modal-content {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 300px;
+            }
+            
+            /* Caption of Modal Image */
+            #caption {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 700px;
+              text-align: center;
+              color: #ccc;
+              padding: 10px 0;
+              height: 150px;
+            }
+            
+            /* Add Animation */
+            .modal-content, #caption {  
+              -webkit-animation-name: zoom;
+              -webkit-animation-duration: 0.6s;
+              animation-name: zoom;
+              animation-duration: 0.6s;
+            }
+            
+            @-webkit-keyframes zoom {
+              from {-webkit-transform:scale(0)} 
+              to {-webkit-transform:scale(1)}
+            }
+            
+            @keyframes zoom {
+              from {transform:scale(0)} 
+              to {transform:scale(1)}
+            }
+            
+            /* The Close Button */
+            .close {
+              position: absolute;
+              top: 150px;
+              right: 350px;
+              color: #f1f1f1;
+              font-size: 40px;
+              font-weight: bold;
+              transition: 0.3s;
+            }
+            
+            .close:hover,
+            .close:focus {
+              color: #bbb;
+              text-decoration: none;
+              cursor: pointer;
+            }
+            
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px){
+              .modal-content {
+                width: 100%;
+              }
+            }
+    </style>
+	
+	
+	</head>
+	
+	<body class="state1 background-100-e">
+
+		<div class="ext-nav background-95-h page-transition">
+			<div class="view half-height">
+				<img alt class="bg static" src="images/placeholders/1920x1200-1.jpg" />
+				<div class="content no-top-padding no-bottom-padding  full-height">
+					<div class="container-fluid  full-height">
+						<div class="row full-height">
+							<a href="#" class="col-md-6 colors-e background-95-e full-height">
+								<div>
+									<span class="side-label">Know about our blog</span>
+									<span class="side-title">Blog</span>
+								</div>
+							</a>
+							<a href="#" class="col-md-6 colors-f background-95-f full-height">
+								<div>
+									<span class="side-label">Our documentation for any kind of help</span>
+									<span class="side-title">Help</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid  half-height">
+				<div class="row full-height">
+					<a href="#how-we-work" class="col-md-4 colors-g background-solid full-height border-bottom border-lite">
+						<div>
+							<span class="side-label">Something about our work</span>
+							<span class="side-title">How We Work</span>
+						</div>
+					</a>
+					<a href="#who-we-are" class="col-md-4 colors-g background-solid full-height border-bottom border-left border-lite">
+						<div>
+							<span class="side-label">Let us introduce ourselves</span>
+							<span class="side-title">Who We Are</span>
+						</div>
+					</a>
+					<a href="#numbers" class="col-md-4 colors-g background-solid full-height border-bottom border-left border-lite">
+						<div>
+							<span class="side-label">Our Achievements</span>
+							<span class="side-title">Our Numbers</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="page-border bottom colors-e background-solid"><a href="#top" class="hover-effect">To <span class="highlight">Top</span></a></div>
+		<div class="page-border left colors-e background-solid">
+			<ul>
+				<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="http://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+				<li><a href="https://vimeo.com/" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+				<li><a href="http://www.skype.com/" target="_blank"><i class="fa fa-skype"></i></a></li>
+			</ul>
+		</div>
+		<!-- BEGIN: Top menu -->
+		<div class="page-border right colors-e background-solid"></div>
+		<nav class="navbar navbar-default navbar-fixed-top page-transition colors-e background-solid" role="navigation" id="top-nav">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="menu-toggle ext-nav-toggle visible-xs-block" data-target=".ext-nav" href="#"><span></span></a>
+					<a class="menu-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#"><span></span></a>
+					
+					<a class="navbar-brand" href="index.html" style= "font-size:25px;"><img src="favicon.png" height="39" width="24">Cloth<span class="highlight">Prism</span></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right" style="padding-top : 7px;">
+						<li><a href="#home" class="hover-effect">Home</a></li>
+						<li><a href="#about" class="hover-effect">Company</a></li>
+						<li><a href="#team" class="hover-effect">Credentials</a></li>
+						<li class="nav-item dropdown"><a href="#who-we-are" class="hover-effect" data-target="#microdrop" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Collections
+						</a>
+                        <div class="dropdown-menu" id="microdrop">
+                        	<ul>
+                             <li><a class="dropdown-item hover-effect" href="high-fashion.html"><b>High Fashion Embroidery</b></a></li>
+                             <li><a class="dropdown-item hover-effect" href="feathers-embroidary.html"><b>Feathers – Embroidery</b></a></li>
+                             <li><a class="dropdown-item hover-effect" href="accessories.html" ><b>Accessories / Trims / Motifs / Neck line</b></a></li>
+                             <li><a class="dropdown-item hover-effect" href="woven.html" ><b>Woven Fabrics of Silk</b></a></li>
+                              <li><a class="dropdown-item hover-effect" href="linen.html" ><b>Linen Fabrics</b> </a></li>
+                             
+                         </ul>
+                        </div>
+                        </li>
+						<li><a href="design-studio.html" class="hover-effect">Design Studio</a></li>
+						<li><a href="#contact" class="hover-effect">Contact</a></li>
+						<li class="hidden-xs"><a class="menu-toggle ext-nav-toggle" data-target=".ext-nav" href="#"><span></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END: Top menu -->
+		<ul id="dot-scroll" class="colors-e background-solid"></ul>
+		<div class="overlay-window gallery-overlay colors-f background-95-f" data-overlay-zoom="#work .content">
+			<div class="overlay-control background-85-d">
+				<a class="previos" href="#"></a>
+				<a class="next" href="#"></a>
+				<a class="cross" href="#"></a>
+			</div>
+			<div class="overlay-view"></div>
+			<ul class="loader">
+				<li class="background-100-d"></li>
+				<li class="background-100-d"></li>
+				<li class="background-100-d"></li>
+			</ul>
+		</div>
+		<div class="overlay-window map-overlay colors-f background-95-f">
+			<div class="overlay-control background-90-f">
+				<a class="cross" href="#"></a>
+			</div>
+			<div class="overlay-view">
+				<div class="map-canvas" data-latitude="42.487606" data-longitude="-71.115661" data-zoom="14">
+					<div class="map-marker" data-latitude="42.487606" data-longitude="-71.115661" data-text="Our awesome location"></div>
+					<div class="map-marker" data-latitude="42.485100" data-longitude="-71.113256" data-text="Our sales office"></div>
+				</div>
+			</div>
+		</div>
+		<div class="overlay-window credits-overlay colors-g background-95-g">
+			<div class="overlay-control background-85-d">
+				<a class="cross" href="#"></a>
+			</div>
+			<div class="overlay-view">
+				<div class="content-container">
+					<h3>Credits</h3>
+					<ul>
+						<li>
+							Photos by:
+							<ul>
+								<li><a target="_blank" href="https://www.flickr.com/photos/katya_alagich/">Katya Alagich</a>, <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 License</a></li>
+								<li><a target="_blank" href="https://www.flickr.com/photos/65047661@N00/">Jim Lukach</a>, <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 License</a></li>
+								<li><a target="_blank" href="https://www.flickr.com/photos/johanl/">Johan Larsson</a>, <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 License</a></li>
+								<li><a target="_blank" href="https://www.flickr.com/photos/johny/">John Kraus</a>, <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 License</a></li>
+								<li><a target="_blank" href="https://www.flickr.com/photos/geishaboy500/">THOR</a>, <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 License</a></li>
+								<li><a target="_blank" href="https://www.flickr.com/photos/stf-o/">stephane</a>, <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 License</a></li>
+								<li><a target="_blank" href="http://www.pexels.com/">Pexels</a>, <a target="_blank" href="http://www.pexels.com/photo-license/">CC0 License</a></li>
+								<li><a target="_blank" href="https://stocksnap.io/">Stocksnap</a>, <a target="_blank" href="https://stocksnap.io/license">CC0 License</a></li>
+								<li><a target="_blank" href="http://picjumbo.com/">Picjumbo</a>, <a target="_blank" href="http://picjumbo.com/about-author/">Picjumbo License</a></li>
+							</ul>
+						</li>
+						<li>
+							Video by:
+							<ul>
+								<li><a target="_blank" href="http://mazwai.com/">Mazwai</a>, <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0 License</a></li>
+							</ul>
+						</li>
+						<li>
+							Icons by:
+							<ul>
+								<li><a target="_blank" href="http://designmodo.com/">Designmodoh</a>, <a target="_blank" href="http://designmodo.com/linecons-free/">License</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="gate colors-e background-solid">
+			<div class="gate-bar background-highlight-e"></div>
+			<ul class="loader">
+				<li class="background-100-g"></li>
+				<li class="background-90-c"></li>
+				<li class="background-100-f"></li>
+			</ul>
+		</div>
+
+<section id="work" style="padding-top:200px;">
+			<div class="view">
+				<img alt class="bg" src="images/placeholders/banner_linen.jpg" /><img alt class="bg" src="images/placeholders/banner_embrodery.jpg" />
+				<div class="content no-bottom-padding colors-e">
+					<div class="container">
+						<h2>Our <span class="highlight">High Fashion Embroidery</span></h2>
+						<p class="header-details"><span class="highlight">Some Recent</span> Projects</p>
+						<p class="lead">We are showcasing some of our works so that you will have some idea about our work.</p>
+					</div>
+					<div class="gallery background-e" data-default-group="all" data-overlay=".gallery-overlay">
+						<div class="container-fluid">
+							<div class="filter">
+								<ul class="nav nav-pills text-center">
+									<li><a class="hover-effect" data-group="all" href="#">All</a></li>
+								
+								</ul>
+							</div>
+							<div class="row">
+								<div class="grid">
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["design"]'  style="padding:3px;">
+										<a class="hover-overlay" href="#!portfolio-item-1(1).html">
+											<img alt="Project 1" src="images/portfolio/high-fashion1.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">Image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-picture-o heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "web", "video"]' style="padding:3px;">
+										<a href="#!portfolio-item-1(2).html" class="hover-overlay">
+											<img alt="Project 2" src="images/portfolio/high-fashion2.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-youtube-square heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "design"]'  style="padding:3px;">
+										<a href="#!portfolio-item-1(3).html" class="hover-overlay">
+											<img alt="Project 3" src="images/portfolio/high-fashion3.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">Image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-th heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "web", "video"]'  style="padding:3px;">
+										<a href="#!portfolio-item-1(4).html" class="hover-overlay">
+											<img alt="Project 4" src="images/portfolio/high-fashion4.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">Image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-vimeo-square heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "design"]'  style="padding:3px;">
+										<a href="#!portfolio-item-1(5).html" class="hover-overlay">
+											<img alt="Project 5" src="images/portfolio/high-fashion5.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">Image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-th heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "web", "design"]' style="padding:3px;">
+										<a href="#!portfolio-item-1(6).html" class="hover-overlay">
+											<img alt="Project 6" src="images/portfolio/high-fashion6.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">Image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-picture-o heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["design", "video", "web"]' style="padding:3px;">
+										<a href="#!portfolio-item-1(7).html" class="hover-overlay">
+											<img alt="Project 7" src="images/portfolio/high-fashion7.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">Image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-vimeo-square heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["web"]'  style="padding:3px;">
+										<a href="#!portfolio-item-1(8).html" class="hover-overlay">
+											<img alt="Project 8" src="images/portfolio/high-fashion8.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">Image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-picture-o heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "design", "video", "web"]'  style="padding:3px;">
+										<a href="#!portfolio-item-1(9).html" class="hover-overlay">
+											<img alt="Project 9" src="images/portfolio/high-fashion9.jpg" />
+											<div class="overlay background-90-e">
+												<div class="hidden-xs">
+													<p class="title heading-e">Image</p>
+													<p class="text-center heading-e"><strong>Click here to see the image</strong></p>
+													<p class="text-center"><i class="fa fa-youtube-square heading-e"></i></p>
+												</div>
+											</div>
+										</a>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- BEGIN: Footer -->
+		<footer class="colors-g page-transition non-preloading">
+			<div class="container scroll-in-animation" data-animation="fadeInDown">
+				<div class="row">
+					<div class="col-md-3">
+					    
+						<h4>Cloth<span class="highlight">Prism</span></h4>
+						<div class="footer-description">
+							<p>keep connected with us on social media platforms.Website by <a href="https://www.oknitech.com" class="open-overlay-window heading" data-overlay-window=".credits-overlay">OKNITECH CORPORATION.</a></p>
+						</div>
+						<p class="social-links">
+							<a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+							<a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+							<a target="_blank" href="http://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+							<a target="_blank" href="https://vimeo.com/"><i class="fa fa-vimeo-square"></i></a>
+							<a target="_blank" href="https://www.pinterest.com/"><i class="fa fa-printerest"></i></a>
+							<a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>Additional Links</h5>
+						<ul class="simple">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">Company</a></li>
+							<li><a href="#team">Credentials</a></li>
+							<li><a href="#collections">Collections</a></li>
+							<li><a href="design-studio.html">Design Studio</a></li>
+							<li><a href="#">Infrastructure</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>Collections</h5>
+						<ul class="simple">
+							<li><a href="high-fashion.html">High-fashion Embroidery</a></li>
+							<li><a href="feathers-embroidary.html">Feathers Embroidery</a></li>
+							<li><a href="accessories.html">Accessories/motifs/trims/necklines</a></li>
+							<li><a href="woven.html">Woven fabrics of silk</a></li>
+							<li><a href="linen.html">Linen fabrics</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>Our Certificates</h5>
+						<div class="photo">
+							<div class="col-xs-3 col-sm-2 col-md-4">
+							<img class="fluid-width" id="myImg" src="images/textile/iso.jpg" style="height:200px; width:150px;" alt="ISO Certification">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+			<div class="bottom text-center background-10-b">
+				© 2020 All Rights Reserved. <a href="www.oknitech.com" class="open-overlay-window heading" data-overlay-window=".credits-overlay">OKNITECH CORPORATION.</a>
+			</div>
+		</footer>
+		
+		
+		<script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+</script>
+        <!-- END: Footer -->
+        
+        
+		<script>
+		if (typeof(atob) == "undefined")
+		{
+			document.write('<script src="lib/stringencoders-v3.10.3/javascript/base64.js"><\/script>');
+			var atob = function(x)
+			{
+				return base64.decode(x);
+			}
+		}
+		</script>
+		<script src="bower_components/less.js/dist/less.min.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="lib/tween/tween.min.js"></script>
+		<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="lib/SmoothScroll-1.2.1/SmoothScroll.js"></script>
+		<script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="bower_components/jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js"></script>
+		<script src="bower_components/minicolors/jquery.minicolors.min.js"></script>
+		<script src="bower_components/slick.js/slick/slick.min.js"></script>
+		<script src="bower_components/shufflejs/dist/jquery.shuffle.min.js"></script>
+		<script src="bower_components/textillate/assets/jquery.lettering.js"></script>
+		<script src="bower_components/textillate/assets/jquery.fittext.js"></script>
+		<script src="bower_components/textillate/jquery.textillate.js"></script>
+		<script src="lib/prism/prism.js"></script>
+		<script>
+		(function()
+		{
+			var disableMobileAnimations = true;
+			var isWin = navigator.appVersion.indexOf("Win") !== -1;
+			if (isWin) $('html').addClass('win');
+			var ua = navigator.userAgent.toLowerCase();
+			var isChrome = ua.indexOf('chrome') > -1;
+			if (isChrome) $('html').addClass('chrome');
+			var isAndroidBrowser4_3minus = ((ua.indexOf('mozilla/5.0') > -1 && ua.indexOf('android ') > -1 && ua.indexOf('applewebkit') > -1) && !(ua.indexOf('chrome') > -1));
+			if (isAndroidBrowser4_3minus) $('html').addClass('android-browser-4_3minus');
+			var isSafari = !isChrome && ua.indexOf('safari') !== -1;
+			if (isSafari) $('html').addClass('safari');
+			var isMobile = Modernizr.touch;
+			if (isMobile)
+			{
+				$('html').addClass('mobile');
+				if (disableMobileAnimations) $('html').addClass('poor-browser');
+			}
+			else
+			{
+				$('html').addClass('non-mobile');
+			}
+			if (isWin && isSafari)
+			{
+				$('html').addClass('flat-animation');
+			}
+		})();
+		</script>
+		<script src="scripts/script-bundle.js"></script>
+		<script>
+		if (Function('/*@cc_on return document.documentMode===9@*/')())
+		{
+			$('html').addClass('ie9');
+		}
+		if (Function('/*@cc_on return document.documentMode===10@*/')())
+		{
+			$('html').addClass('ie10');
+		}
+		if (!!navigator.userAgent.match(/Trident.*rv\:11\./))
+		{
+			$('html').addClass('ie11');
+		}
+		</script>
+	</body>
+</html>
